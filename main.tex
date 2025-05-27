@@ -1,0 +1,95 @@
+\documentclass[xcolor=x11names,compress, aspectratio=43   ]{beamer}
+
+%% General document %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{booktabs}
+\usetikzlibrary{arrows.meta}
+\usetikzlibrary{positioning, shapes.geometric, backgrounds}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Define the ``official'' UMN colors
+\xdefinecolor{GopherMaroon}{HTML}{7A0019}
+\xdefinecolor{GopherGold}{HTML}{FFCC33}
+\xdefinecolor{GopherLightGold}{HTML}{FFDE7A}
+\xdefinecolor{GopherDarkMaroon}{HTML}{5B0013}
+
+% Add alert block colors
+\setbeamercolor{block title}{fg=white,bg=GopherMaroon}
+\setbeamercolor{block body}{fg=black,bg=GopherLightGold!30}
+
+%% Beamer Layout %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Two Options, uncomment the desired option.
+%   # 1: Navigation bar shows one 'bullet' per slide
+% \useoutertheme[subsection=false,shadow]{miniframes}
+\useoutertheme{default}
+%%%% end of # 1
+
+%   # 2: Navigation bar shows one bullet per subsection
+%        Reference: http://tex.stackexchange.com/a/64419/60315
+%\useoutertheme[subsection=false]{miniframes}
+%\usepackage{etoolbox}
+%\makeatletter
+%\patchcmd{\slideentry}{\advance\beamer@xpos by1\relax}{}{}{}
+%\def\beamer@subsectionentry#1#2#3#4#5{\advance\beamer@xpos by1\relax}%
+%\makeatother
+%%%% end of # 2
+
+
+\useinnertheme{default}
+\usefonttheme{serif}
+\usepackage{palatino}
+
+\setbeamerfont{title}{shape=\scshape}
+\setbeamerfont{frametitle}{shape=\scshape}
+
+\setbeamercolor*{lower separation line head}{bg=GopherLightGold} 
+\setbeamercolor*{normal text}{fg=black,bg=white} 
+\setbeamercolor*{alerted text}{fg=red} 
+\setbeamercolor*{example text}{fg=black} 
+\setbeamercolor*{structure}{fg=black} 
+ 
+% \setbeamercolor*{palette tertiary}{fg=GopherDarkMaroon,bg=GopherLightGold} 
+\setbeamercolor*{palette tertiary}{fg=black,bg=white} 
+\setbeamercolor*{palette quaternary}{fg=GopherDarkMaroon,bg=GopherLightGold} 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Customize template further %%%%%%%%%%%%%%%%%%%%%
+% Add Logo and slide numbers to footer
+\setbeamertemplate{footline}{
+\parbox{\textwidth}{\vspace*{-30pt} ~~ \hfill {\footnotesize \insertshortauthor} ~~~}
+\parbox{\textwidth}{\vspace*{-15pt}
+                             ~~
+                             \includegraphics[width=0.25\paperwidth]{UMN9_lgM-D2D-wdmk-blk.png} 
+                             \hfill 
+                             \color{gray}{\tiny \insertframenumber\,/\,\inserttotalframenumber~~~}}}
+\setbeamertemplate{navigation symbols}{}    % remove navigation symbols 
+% (http://tex.stackexchange.com/a/688)
+
+\setbeamertemplate{itemize item}{\includegraphics[height=1.8ex]{goldyfacingL.png}}
+\setbeamertemplate{itemize subitem}{\includegraphics[height=1.8ex]{goldyfacingL.png}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+\title{An IV Approach For Informative Treatment Switching In Real-World Evidence}
+%\subtitle{SUBTITLE}
+\author[Yang L]{
+  Yang Liu\\
+  {\it \small Division of Biostatistics and\\ Health Data Science}\\
+}
+\institute{
+  \includegraphics{UMN9_M-D2D-wdmk-blk.png}}
+\date{}
+
+{% no page #, no logo on title page
+  \setbeamertemplate{footline}{}
+  \setbeamertemplate{headline}{}
+  \begin{frame}
+    \titlepage
+  \end{frame}
+}
+
+\end{document}
